@@ -2,12 +2,29 @@
 const header = document.querySelector('header');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 10) {
         header.classList.add('scrolled');
     } else {
         header.classList.remove('scrolled');
     }
 });
+
+// Set initial header state on load
+if (window.scrollY > 10) {
+    header.classList.add('scrolled');
+}
+
+// Mobile menu toggle
+const menuToggle = document.getElementById('mobile-menu-toggle');
+const navLinksContainer = document.querySelector('.nav-links');
+
+if (menuToggle && navLinksContainer) {
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinksContainer.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    });
+}
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -18,6 +35,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const targetElement = document.querySelector(targetId);
         
         if (targetElement) {
+            // Close mobile menu if open
+            if (menuToggle && navLinksContainer) {
+                menuToggle.classList.remove('active');
+                navLinksContainer.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+
             // Update active link
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.classList.remove('active');
@@ -29,6 +53,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 top: targetElement.offsetTop - 80, // Offset for fixed header
                 behavior: 'smooth'
             });
+        }
+    });
+});
+
+// Close mobile menu when clicking any nav link (e.g. navigation links that navigate to external pages/anchors)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (menuToggle && navLinksContainer) {
+            menuToggle.classList.remove('active');
+            navLinksContainer.classList.remove('active');
+            document.body.classList.remove('menu-open');
         }
     });
 });
