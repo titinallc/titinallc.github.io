@@ -3,184 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TITINA LLC2 | Juegos en Desarrollo</title>
-    <style>
-        /* Paleta de colores pastel */
-        :root {
-            --bg-color: #fdfbf7; /* Crema suave */
-            --header-bg: #b5e2fa; /* Azul pastel */
-            --text-color: #5c5c5c;
-            --card-bg: #ffffff;
-            --btn-color: #ffcc5c; /* Amarillo pastel/mostaza suave para indicar "en progreso" */
-            --btn-hover: #ffb732;
-            --footer-bg: #e2f0cb; /* Verde pastel */
-        }
-        
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
-
-        /* Barra de navegación */
-        header {
-            padding: 20px 50px;
-            background: var(--header-bg);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            border-bottom: 3px solid #fff;
-        }
-
-        header h1 {
-            margin: 0;
-            color: #4a4a4a;
-            font-size: 1.8rem;
-            font-weight: 900;
-            letter-spacing: 1px;
-        }
-
-        /* Sección Principal (Hero) */
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background-color: #f8edeb; /* Rosa muy claro */
-            border-bottom: 3px dashed #ffb7b2;
-        }
-
-        .hero h2 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            color: #ff8fab;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #7a7a7a;
-            max-width: 600px;
-            margin: 0 auto 30px auto;
-            line-height: 1.6;
-        }
-
-        /* Cuadrícula de Juegos */
-        .games-grid {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            padding: 60px 20px;
-            flex-wrap: wrap;
-        }
-
-        .game-card {
-            background: var(--card-bg);
-            padding: 30px 20px;
-            border-radius: 25px; /* Bordes suaves */
-            width: 300px;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 2px solid #fff;
-        }
-
-        .game-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
-            border-color: #b5e2fa;
-        }
-
-        /* Espacio para el ícono del juego */
-        .game-card .icon-placeholder {
-            width: 100px;
-            height: 100px;
-            background-color: #e2f0cb;
-            border-radius: 25px;
-            margin: 0 auto 20px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: #a3c982;
-        }
-
-        .game-card h3 {
-            color: #4a4a4a;
-            margin-top: 0;
-            font-size: 1.4rem;
-        }
-
-        .game-card p {
-            color: #888;
-            font-size: 0.95rem;
-            margin-bottom: 25px;
-        }
-
-        /* Botón de estado "En Desarrollo" */
-        .status-btn {
-            display: inline-block;
-            background-color: var(--btn-color);
-            color: #4a4a4a;
-            padding: 12px 24px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            cursor: default; /* Cursor normal porque no es un enlace clickeable aún */
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        /* Pie de página */
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: var(--footer-bg);
-            color: #6a8e4e;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-    </style>
+    <title>Titina Games - Estudio de Videojuegos</title>
+    
+    <meta name="description" content="Bienvenido a Titina Games, creadores de juegos móviles divertidos y atractivos.">
+    <meta name="keywords" content="Titina Games, videojuegos moviles, juegos casuales, android games, ios games">
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
 
     <header>
-        <h1>TITINA LLC</h1>
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <img src="assets/logo.png" alt="Titina Games Logo" class="logo-img" id="nav-logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#games">Juegos</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="hero">
-        <h2>¡Cocinando nuevas aventuras!</h2>
-        <p>Nuestro estudio está trabajando arduamente para crear juegos móviles llenos de color, magia y mucha diversión para los más pequeños.</p>
-    </section>
-
-    <section id="games" class="games-grid">
-        <!-- Tarjeta Juego 1 -->
-        <div class="game-card">
-            <div class="icon-placeholder">🛠️</div>
-            <h3>JUEGO GENERICO</h3>
-            <p>Estamos programando saltos, diseñando niveles y preparando muchas sorpresas increíbles.</p>
-            <div class="status-btn">En Desarrollo ⏳</div>
-        </div>
-
-        <!-- Tarjeta Juego 2 -->
-        <div class="game-card">
-            <div class="icon-placeholder">🎨</div>
-            <h3>JUEGO GENERICO</h3>
-            <p>Nuestros artistas están dibujando mundos mágicos y personajes súper divertidos.</p>
-            <div class="status-btn">Creando Arte ✨</div>
-        </div>
-        
-        <!-- Tarjeta Juego 3 -->
-        <div class="game-card">
-            <div class="icon-placeholder">🚀</div>
-            <h3>JUEGO GENERICO</h3>
-            <p>Construyendo los últimos detalles para que pronto puedas despegar hacia la diversión.</p>
-            <div class="status-btn">Próximamente 📅</div>
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1 class="hero-title">Diversión y <span class="highlight-text">Aventuras</span> para todos</h1>
+            <p class="hero-subtitle">Titina Games es un estudio enfocado en crear juegos casuales, muy divertidos y experiencias de mundo abierto de todo tipo.</p>
+            <a href="#games" class="btn-primary">Descubre nuestro juego</a>
         </div>
     </section>
+
+    <main>
+        <section class="games container" id="games">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Lanzamiento</h2>
+                <p class="section-subtitle">Disfruta de la magia de Titina Games</p>
+            </div>
+
+            <article class="game-card" id="game-titina">
+                <div class="game-banner-wrapper">
+                    <!-- Instrucción: Guarda la imagen que subiste en la carpeta 'assets' como 'juego1.png' (o .jpg) y reemplaza la ruta si es necesario -->
+                    <img src="assets/juego1.png" alt="Primer Juego de Titina Games" class="game-banner">
+                    <div class="game-banner-overlay"></div>
+                    <div class="coming-soon-badge">¡PRÓXIMAMENTE!</div>
+                </div>
+                
+                <div class="game-card-content">
+                    <div class="game-header">
+                        <div class="game-title-meta">
+                            <h3 class="game-title">Nuestro Primer Juego</h3>
+                            <span class="game-studio-label">Titina Games</span>
+                        </div>
+                    </div>
+                    
+                    <p class="game-description">
+                        Prepárate para explorar un mundo abierto lleno de diversión, estilo y mucha acción en nuestro primer gran lanzamiento. ¡Estamos trabajando arduamente para traerte la mejor experiencia! Mantente atento a nuestras redes para más actualizaciones.
+                    </p>
+                    
+                    <div class="coming-soon-info">
+                        <div class="status-indicator">
+                            <span class="pulse"></span> En Desarrollo
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="about container" id="about">
+            <div class="about-content">
+                <div class="about-logo-wrapper">
+                    <img src="assets/logo.png" alt="Titina Games Logo" class="about-logo">
+                </div>
+                <h2 class="section-title">Sobre el Estudio</h2>
+                <p class="about-text">Nacimos con la pasión de llevar diversión directa, mecánicas pulidas y estilos artísticos vibrantes a los teléfonos móviles de todo el mundo. Creemos que los mejores juegos son aquellos que capturan tu atención al instante, ofreciendo desafíos gratificantes que puedes disfrutar en cualquier lugar.</p>
+                
+                <div class="stats-divider"></div>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number">1</span>
+                        <span class="stat-label">JUEGOS EN DESARROLLO</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2026</span>
+                        <span class="stat-label">AÑO DE FUNDACIÓN</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">DESARROLLO INDIE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact container" id="contact">
+            <div class="contact-card">
+                <h2 class="contact-title">¿Tienes preguntas o comentarios?</h2>
+                <p class="contact-text">Estamos siempre listos para escuchar a nuestra comunidad. Si tienes sugerencias, reportes de fallos o consultas comerciales, envíanos un correo electrónico.</p>
+                
+                <a href="mailto:titinagamescontacto@gmail.com" class="contact-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mail-icon"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    titinagamescontacto@gmail.com
+                </a>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        &copy; 2026 TITINA LLC. ¡Haciendo juegos con mucho cariño!
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#games">Juegos</a>
+                <a href="#about">Nosotros</a>
+                <a href="#contact">Soporte</a>
+                <a href="privacidad.html">Política de Privacidad</a>
+            </div>
+            
+            <p>&copy; 2026 Titina Games. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
