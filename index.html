@@ -3,16 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titina Games - Estudio de Videojuegos</title>
-    
+    <title data-i18n="meta.title">Titina Games - Estudio de Videojuegos</title>
+
     <meta name="description" content="Bienvenido a Titina Games, creadores de juegos móviles divertidos y atractivos.">
-    <meta name="keywords" content="Titina Games, videojuegos moviles, juegos casuales, android games, ios games">
-    
-    <link rel="stylesheet" href="style.css?v=1.7">
+    <meta name="keywords" content="Titina Games, videojuegos moviles, juegos casuales, android games, mundo abierto">
+
+    <link rel="stylesheet" href="style.css?v=2.0">
     <!-- Google Fonts for modern typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Shared SVG definitions (Google Play triangle gradient) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <defs>
+            <linearGradient id="gplay-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#00d4ff"></stop>
+                <stop offset="0.38" stop-color="#00e676"></stop>
+                <stop offset="0.7" stop-color="#ffd400"></stop>
+                <stop offset="1" stop-color="#ff3d5e"></stop>
+            </linearGradient>
+        </defs>
+    </svg>
+
     <div class="bg-wrapper">
         <div class="bg-glow bg-glow-1"></div>
         <div class="bg-glow bg-glow-2"></div>
@@ -25,100 +39,207 @@
                 <div class="logo-container">
                     <img src="assets/logo.png" alt="Titina Games Logo" class="logo-img" id="nav-logo">
                 </div>
-                <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menú de navegación">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
+
                 <ul class="nav-links">
-                    <li><a href="#inicio" class="active">Inicio</a></li>
-                    <li><a href="#games">Juegos</a></li>
-                    <li><a href="#about">Nosotros</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#inicio" class="active" data-i18n="nav.home">Inicio</a></li>
+                    <li><a href="#games" data-i18n="nav.games">Juegos</a></li>
+                    <li><a href="#about" data-i18n="nav.about">Nosotros</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
                 </ul>
+
+                <div class="nav-actions">
+                    <!-- Language switcher -->
+                    <div class="lang-switcher" id="lang-switcher">
+                        <button class="lang-btn" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" data-i18n-aria="lang.label" aria-label="Cambiar idioma">
+                            <svg class="lang-globe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                            <span class="lang-code" id="lang-code">ES</span>
+                            <svg class="lang-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                        <ul class="lang-menu" id="lang-menu" role="listbox"></ul>
+                    </div>
+
+                    <button class="menu-toggle" id="mobile-menu-toggle" data-i18n-aria="nav.menu" aria-label="Abrir menú de navegación">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
 
     <section class="hero" id="inicio">
-        <div class="container">
-            <h1 class="hero-title">Diversión y <span class="highlight-text">Aventuras</span> para todos</h1>
-            <p class="hero-subtitle">Titina Games es un estudio enfocado en crear juegos casuales, muy divertidos y experiencias de mundo abierto de todo tipo.</p>
-            <a href="#games" class="btn-primary">Descubre nuestro juego</a>
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <span class="hero-badge reveal">
+                    <span class="hero-badge-dot"></span>
+                    <span data-i18n="hero.badge">¡Ya disponible en Google Play!</span>
+                </span>
+                <h1 class="hero-title reveal" data-i18n-html="hero.title">Diversión y <span class="highlight-text">Aventuras</span> para todos</h1>
+                <p class="hero-subtitle reveal" data-i18n="hero.subtitle">Titina Games es un estudio enfocado en crear juegos casuales, muy divertidos y experiencias de mundo abierto de todo tipo.</p>
+                <div class="hero-actions reveal">
+                    <a href="https://play.google.com/store/apps/details?id=com.titina.GP1" target="_blank" rel="noopener" class="btn-gplay">
+                        <span class="gplay-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="url(#gplay-grad)" stroke="url(#gplay-grad)" stroke-width="1.2" stroke-linejoin="round" d="M3.4 2.6 20 12 3.4 21.4 Z"></path></svg>
+                        </span>
+                        <span class="gplay-text">
+                            <span class="gplay-small" data-i18n="play.get">DISPONIBLE EN</span>
+                            <span class="gplay-big">Google Play</span>
+                        </span>
+                    </a>
+                    <a href="#games" class="btn-ghost" data-i18n="hero.cta_secondary">Conoce el juego</a>
+                </div>
+                <div class="hero-meta reveal">
+                    <span class="hero-meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                        <span data-i18n="hero.trust">Gratis para jugar</span>
+                    </span>
+                    <span class="hero-meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                        <span data-i18n="hero.platform">Disponible para Android</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal">
+                <div class="phone">
+                    <div class="phone-screen">
+                        <img src="assets/juego1.png" alt="Captura del juego de Titina Games" loading="eager">
+                    </div>
+                    <span class="phone-cam"></span>
+                </div>
+                <span class="float-shape shape-star shape-1">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.5l2.6 6.3 6.8.5-5.2 4.4 1.6 6.6L12 17.3 6.2 20.8l1.6-6.6L2.6 9.8l6.8-.5z"/></svg>
+                </span>
+                <span class="float-shape shape-star shape-2">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.5l2.6 6.3 6.8.5-5.2 4.4 1.6 6.6L12 17.3 6.2 20.8l1.6-6.6L2.6 9.8l6.8-.5z"/></svg>
+                </span>
+                <span class="float-shape shape-circle shape-3"></span>
+                <span class="float-shape shape-circle shape-4"></span>
+                <span class="float-shape shape-ring shape-5"></span>
+            </div>
         </div>
     </section>
 
     <main>
+        <section class="features" id="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card reveal">
+                        <div class="feature-icon icon-blue">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        </div>
+                        <h3 class="feature-title" data-i18n="feature.openworld.title">Mundo Abierto</h3>
+                        <p class="feature-text" data-i18n="feature.openworld.text">Explora una ciudad enorme con total libertad.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <div class="feature-icon icon-pink">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line><rect x="2" y="6" width="20" height="12" rx="6"></rect></svg>
+                        </div>
+                        <h3 class="feature-title" data-i18n="feature.casual.title">Fácil de Jugar</h3>
+                        <p class="feature-text" data-i18n="feature.casual.text">Controles simples y diversión inmediata para todos.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <div class="feature-icon icon-orange">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path><circle cx="7" cy="17" r="2"></circle><path d="M9 17h6"></path><circle cx="17" cy="17" r="2"></circle></svg>
+                        </div>
+                        <h3 class="feature-title" data-i18n="feature.action.title">Acción y Vehículos</h3>
+                        <p class="feature-text" data-i18n="feature.action.text">Conduce autos, corre y vive aventuras sin límites.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <div class="feature-icon icon-yellow">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 8.3 12 3 3.4 8.3v7.4L12 21l8.6-5.3z"></path><path d="M12 12 3.4 8.3"></path><path d="m12 12 8.6-3.7"></path><path d="M12 12v9"></path></svg>
+                        </div>
+                        <h3 class="feature-title" data-i18n="feature.free.title">Gratis</h3>
+                        <p class="feature-text" data-i18n="feature.free.text">Descarga y juega sin costo en tu teléfono Android.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="games container" id="games">
-            <div class="section-header">
-                <h2 class="section-title">Nuestro Lanzamiento</h2>
-                <p class="section-subtitle">Disfruta de la magia de Titina Games</p>
+            <div class="section-header reveal">
+                <span class="section-eyebrow" data-i18n="games.eyebrow">NUESTRO JUEGO</span>
+                <h2 class="section-title" data-i18n="games.title">Nuestro Lanzamiento</h2>
+                <p class="section-subtitle" data-i18n="games.subtitle">Disfruta de la magia de Titina Games</p>
             </div>
 
-            <article class="game-card" id="game-titina">
+            <article class="game-card reveal" id="game-titina">
                 <div class="game-banner-wrapper">
-                    <!-- Instrucción: Guarda la imagen que subiste en la carpeta 'assets' como 'juego1.png' (o .jpg) y reemplaza la ruta si es necesario -->
                     <img src="assets/juego1.png" alt="Primer Juego de Titina Games" class="game-banner">
                     <div class="game-banner-overlay"></div>
-                    <div class="coming-soon-badge">¡PRÓXIMAMENTE!</div>
+                    <div class="live-badge">
+                        <span class="live-dot"></span>
+                        <span data-i18n="game.badge">YA DISPONIBLE</span>
+                    </div>
                 </div>
-                
+
                 <div class="game-card-content">
                     <div class="game-header">
                         <div class="game-title-meta">
-                            <h3 class="game-title">Nuestro Primer Juego</h3>
+                            <h3 class="game-title" data-i18n="game.title">Nuestro Primer Juego</h3>
                             <span class="game-studio-label">Titina Games</span>
                         </div>
                     </div>
-                    
-                    <p class="game-description">
-                        Prepárate para explorar un mundo abierto lleno de diversión, estilo y mucha acción en nuestro primer gran lanzamiento. ¡Estamos trabajando arduamente para traerte la mejor experiencia! Mantente atento a nuestras redes para más actualizaciones.
+
+                    <p class="game-description" data-i18n="game.description">
+                        Explora un mundo abierto lleno de diversión, estilo y mucha acción en nuestro primer gran lanzamiento. ¡Ya puedes descargarlo gratis en Google Play y comenzar tu aventura!
                     </p>
-                    
-                    <div class="coming-soon-info">
-                        <div class="status-indicator">
-                            <span class="pulse"></span> En Desarrollo
-                        </div>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar"></div>
-                        </div>
+
+                    <div class="game-tags">
+                        <span class="game-tag" data-i18n="tag.openworld">Mundo Abierto</span>
+                        <span class="game-tag" data-i18n="tag.action">Acción</span>
+                        <span class="game-tag" data-i18n="tag.free">Gratis</span>
+                        <span class="game-tag">Android</span>
+                    </div>
+
+                    <div class="game-cta">
+                        <a href="https://play.google.com/store/apps/details?id=com.titina.GP1" target="_blank" rel="noopener" class="btn-gplay">
+                            <span class="gplay-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="url(#gplay-grad)" stroke="url(#gplay-grad)" stroke-width="1.2" stroke-linejoin="round" d="M3.4 2.6 20 12 3.4 21.4 Z"></path></svg>
+                            </span>
+                            <span class="gplay-text">
+                                <span class="gplay-small" data-i18n="play.get">DISPONIBLE EN</span>
+                                <span class="gplay-big">Google Play</span>
+                            </span>
+                        </a>
                     </div>
                 </div>
             </article>
         </section>
 
         <section class="about container" id="about">
-            <div class="about-content">
+            <div class="about-content reveal">
                 <div class="about-logo-wrapper">
                     <img src="assets/logo.png" alt="Titina Games Logo" class="about-logo">
                 </div>
-                <h2 class="section-title">Sobre el Estudio</h2>
-                <p class="about-text">Nacimos con la pasión de llevar diversión directa, mecánicas pulidas y estilos artísticos vibrantes a los teléfonos móviles de todo el mundo. Creemos que los mejores juegos son aquellos que capturan tu atención al instante, ofreciendo desafíos gratificantes que puedes disfrutar en cualquier lugar.</p>
-                
+                <h2 class="section-title" data-i18n="about.title">Sobre el Estudio</h2>
+                <p class="about-text" data-i18n="about.text">Nacimos con la pasión de llevar diversión directa, mecánicas pulidas y estilos artísticos vibrantes a los teléfonos móviles de todo el mundo. Creemos que los mejores juegos son aquellos que capturan tu atención al instante, ofreciendo desafíos gratificantes que puedes disfrutar en cualquier lugar.</p>
+
                 <div class="stats-divider"></div>
-                
+
                 <div class="stats-container">
                     <div class="stat-item">
                         <span class="stat-number">1</span>
-                        <span class="stat-label">JUEGOS EN DESARROLLO</span>
+                        <span class="stat-label" data-i18n="stat.games.label">JUEGO PUBLICADO</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">2026</span>
-                        <span class="stat-label">AÑO DE FUNDACIÓN</span>
+                        <span class="stat-label" data-i18n="stat.year.label">AÑO DE FUNDACIÓN</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">100%</span>
-                        <span class="stat-label">DESARROLLO INDIE</span>
+                        <span class="stat-label" data-i18n="stat.indie.label">DESARROLLO INDIE</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="contact container" id="contact">
-            <div class="contact-card">
-                <h2 class="contact-title">¿Tienes preguntas o comentarios?</h2>
-                <p class="contact-text">Estamos siempre listos para escuchar a nuestra comunidad. Si tienes sugerencias, reportes de fallos o consultas comerciales, envíanos un correo electrónico.</p>
-                
+            <div class="contact-card reveal">
+                <h2 class="contact-title" data-i18n="contact.title">¿Tienes preguntas o comentarios?</h2>
+                <p class="contact-text" data-i18n="contact.text">Estamos siempre listos para escuchar a nuestra comunidad. Si tienes sugerencias, reportes de fallos o consultas comerciales, envíanos un correo electrónico.</p>
+
                 <a href="mailto:titinagamescontacto@gmail.com" class="contact-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mail-icon"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
                     titinagamescontacto@gmail.com
@@ -130,18 +251,19 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-links">
-                <a href="#inicio">Inicio</a>
-                <a href="#games">Juegos</a>
-                <a href="#about">Nosotros</a>
-                <a href="#contact">Soporte</a>
-                <a href="privacidad.html">Política de Privacidad</a>
-                <a href="terminos.html">Términos y Condiciones</a>
+                <a href="#inicio" data-i18n="nav.home">Inicio</a>
+                <a href="#games" data-i18n="nav.games">Juegos</a>
+                <a href="#about" data-i18n="nav.about">Nosotros</a>
+                <a href="#contact" data-i18n="footer.support">Soporte</a>
+                <a href="privacidad.html" data-i18n="footer.privacy">Política de Privacidad</a>
+                <a href="terminos.html" data-i18n="footer.terms">Términos y Condiciones</a>
             </div>
-            
-            <p>&copy; 2026 Titina Games. Todos los derechos reservados.</p>
+
+            <p data-i18n="footer.rights">&copy; 2026 Titina Games. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script src="script.js?v=1.7"></script>
+    <script src="i18n.js?v=2.0"></script>
+    <script src="script.js?v=2.0"></script>
 </body>
 </html>

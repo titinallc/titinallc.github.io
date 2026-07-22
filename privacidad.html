@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad - Titina Games</title>
     
-    <link rel="stylesheet" href="style.css?v=1.7">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         .privacy-content {
             background: var(--color-glass);
@@ -95,70 +97,80 @@
         <div class="container">
             <nav>
                 <div class="logo-container">
-                    <img src="assets/logo.png" alt="Titina Games Logo" class="logo-img">
+                    <a href="index.html"><img src="assets/logo.png" alt="Titina Games Logo" class="logo-img"></a>
                 </div>
-                <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menú de navegación">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
                 <ul class="nav-links">
-                    <li><a href="index.html#inicio">Inicio</a></li>
-                    <li><a href="index.html#games">Juegos</a></li>
-                    <li><a href="index.html#about">Nosotros</a></li>
-                    <li><a href="index.html#contact">Soporte</a></li>
+                    <li><a href="index.html#inicio" data-i18n="nav.home">Inicio</a></li>
+                    <li><a href="index.html#games" data-i18n="nav.games">Juegos</a></li>
+                    <li><a href="index.html#about" data-i18n="nav.about">Nosotros</a></li>
+                    <li><a href="index.html#contact" data-i18n="footer.support">Soporte</a></li>
                 </ul>
+                <div class="nav-actions">
+                    <div class="lang-switcher" id="lang-switcher">
+                        <button class="lang-btn" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" data-i18n-aria="lang.label" aria-label="Cambiar idioma">
+                            <svg class="lang-globe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                            <span class="lang-code" id="lang-code">ES</span>
+                            <svg class="lang-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                        <ul class="lang-menu" id="lang-menu" role="listbox"></ul>
+                    </div>
+                    <button class="menu-toggle" id="mobile-menu-toggle" data-i18n-aria="nav.menu" aria-label="Abrir menú de navegación">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
 
     <main class="container">
         <div class="privacy-content">
-            <h1 class="privacy-title">Política de Privacidad</h1>
-            <p class="privacy-date">Última actualización: 8 de Junio, 2026</p>
-            
+            <h1 class="privacy-title" data-i18n="priv.title">Política de Privacidad</h1>
+            <p class="privacy-date" data-i18n="priv.updated">Última actualización: 8 de junio de 2026</p>
+
             <div class="privacy-text">
-                <p>En Titina Games, valoramos tu privacidad. Esta Política de Privacidad explica cómo se recopila, utiliza y divulga la información cuando utilizas nuestros juegos móviles y cualquier otro servicio relacionado.</p>
+                <p data-i18n="priv.intro">En Titina Games, valoramos tu privacidad. Esta Política de Privacidad explica cómo se recopila, utiliza y divulga la información cuando utilizas nuestros juegos móviles y cualquier otro servicio relacionado.</p>
 
-                <h3>1. Recopilación de Información</h3>
-                <p>Nuestras aplicaciones están diseñadas para no recopilar información de identificación personal directamente de los usuarios. No solicitamos registros de cuentas, nombres, correos electrónicos ni números de teléfono para jugar.</p>
-                <p>Sin embargo, para monetizar y mantener nuestros servicios gratuitos, integramos herramientas de terceros que sí recopilan información técnica de manera automática.</p>
+                <h3 data-i18n="priv.s1.h">1. Recopilación de Información</h3>
+                <p data-i18n="priv.s1.p1">Nuestras aplicaciones están diseñadas para no recopilar información de identificación personal directamente de los usuarios. No solicitamos registros de cuentas, nombres, correos electrónicos ni números de teléfono para jugar.</p>
+                <p data-i18n="priv.s1.p2">Sin embargo, para monetizar y mantener nuestros servicios gratuitos, integramos herramientas de terceros que sí recopilan información técnica de manera automática.</p>
 
-                <h3>2. Servicios de Terceros (Publicidad y Monetización)</h3>
-                <p>Nuestros juegos pueden utilizar Google AdMob para mostrar anuncios. AdMob puede recopilar y procesar información sobre ti de forma automática. Esta información incluye, entre otros:</p>
+                <h3 data-i18n="priv.s2.h">2. Servicios de Terceros (Publicidad y Monetización)</h3>
+                <p data-i18n="priv.s2.p1">Nuestros juegos pueden utilizar Google AdMob para mostrar anuncios. AdMob puede recopilar y procesar información sobre ti de forma automática. Esta información incluye, entre otros:</p>
                 <ul>
-                    <li>Identificadores únicos de publicidad del dispositivo (como el ID de publicidad de Google o el IDFA de Apple).</li>
-                    <li>Datos sobre el dispositivo (fabricante, modelo, sistema operativo, idioma y resolución de pantalla).</li>
-                    <li>Datos sobre la interacción con los anuncios (clics, impresiones y visualizaciones).</li>
-                    <li>Información de diagnóstico del sistema (informes de fallos o crash logs, rendimiento de la app y uso de memoria).</li>
-                    <li>Ubicación aproximada (a nivel de ciudad o país) derivada de la dirección IP.</li>
+                    <li data-i18n="priv.s2.li1">Identificadores únicos de publicidad del dispositivo (como el ID de publicidad de Google o el IDFA de Apple).</li>
+                    <li data-i18n="priv.s2.li2">Datos sobre el dispositivo (fabricante, modelo, sistema operativo, idioma y resolución de pantalla).</li>
+                    <li data-i18n="priv.s2.li3">Datos sobre la interacción con los anuncios (clics, impresiones y visualizaciones).</li>
+                    <li data-i18n="priv.s2.li4">Información de diagnóstico del sistema (informes de fallos o crash logs, rendimiento de la app y uso de memoria).</li>
+                    <li data-i18n="priv.s2.li5">Ubicación aproximada (a nivel de ciudad o país) derivada de la dirección IP.</li>
                 </ul>
-                <p>Puedes consultar la política de privacidad de Google relacionada con la publicidad en el siguiente enlace: Políticas y Principios de Publicidad de Google.</p>
+                <p data-i18n="priv.s2.p2">Puedes consultar la política de privacidad de Google relacionada con la publicidad en el siguiente enlace: Políticas y Principios de Publicidad de Google.</p>
 
-                <h3>3. Uso de la Información</h3>
-                <p>La información técnica recopilada automáticamente se utiliza únicamente para:</p>
+                <h3 data-i18n="priv.s3.h">3. Uso de la Información</h3>
+                <p data-i18n="priv.s3.p1">La información técnica recopilada automáticamente se utiliza únicamente para:</p>
                 <ul>
-                    <li>Mostrar anuncios personalizados o no personalizados según corresponda y lo permita tu configuración.</li>
-                    <li>Prevenir fraudes y actividades maliciosas dentro del sistema de publicidad.</li>
-                    <li>Analizar el rendimiento de las campañas publicitarias.</li>
-                    <li>Diagnosticar problemas técnicos, corregir fallos del sistema y optimizar la experiencia de juego.</li>
-                </ul>
-
-                <h3>4. Opciones de Privacidad del Usuario</h3>
-                <p>Si deseas limitar la publicidad personalizada en tu dispositivo móvil, puedes ajustar la configuración en tu teléfono:</p>
-                <ul>
-                    <li><strong>En Android:</strong> Abre Ajustes > Privacidad > Anuncios y selecciona "Restablecer ID de publicidad" o "Inhabilitar personalización de anuncios".</li>
-                    <li><strong>En iOS:</strong> Ve a Ajustes > Privacidad > Rastreo y desactiva la opción de permitir que las aplicaciones soliciten rastrearte.</li>
+                    <li data-i18n="priv.s3.li1">Mostrar anuncios personalizados o no personalizados según corresponda y lo permita tu configuración.</li>
+                    <li data-i18n="priv.s3.li2">Prevenir fraudes y actividades maliciosas dentro del sistema de publicidad.</li>
+                    <li data-i18n="priv.s3.li3">Analizar el rendimiento de las campañas publicitarias.</li>
+                    <li data-i18n="priv.s3.li4">Diagnosticar problemas técnicos, corregir fallos del sistema y optimizar la experiencia de juego.</li>
                 </ul>
 
-                <h3>5. Privacidad de los Niños</h3>
-                <p>Nuestros juegos no están dirigidos intencionalmente a niños menores de 13 años. No recopilamos conscientemente información personal de niños. Si eres padre o tutor y crees que hemos recopilado información sin tu consentimiento, por favor contáctanos de inmediato.</p>
+                <h3 data-i18n="priv.s4.h">4. Opciones de Privacidad del Usuario</h3>
+                <p data-i18n="priv.s4.p1">Si deseas limitar la publicidad personalizada en tu dispositivo móvil, puedes ajustar la configuración en tu teléfono:</p>
+                <ul>
+                    <li data-i18n-html="priv.s4.li1"><strong>En Android:</strong> Abre Ajustes > Privacidad > Anuncios y selecciona "Restablecer ID de publicidad" o "Inhabilitar personalización de anuncios".</li>
+                    <li data-i18n-html="priv.s4.li2"><strong>En iOS:</strong> Ve a Ajustes > Privacidad > Rastreo y desactiva la opción de permitir que las aplicaciones soliciten rastrearte.</li>
+                </ul>
 
-                <h3>6. Cambios en esta Política</h3>
-                <p>Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. Cualquier cambio será publicado en esta página con la fecha de actualización correspondiente.</p>
+                <h3 data-i18n="priv.s5.h">5. Privacidad de los Niños</h3>
+                <p data-i18n="priv.s5.p1">Nuestros juegos no están dirigidos intencionalmente a niños menores de 13 años. No recopilamos conscientemente información personal de niños. Si eres padre o tutor y crees que hemos recopilado información sin tu consentimiento, por favor contáctanos de inmediato.</p>
 
-                <h3>7. Contacto</h3>
-                <p>Si tienes alguna pregunta sobre esta Política de Privacidad o el tratamiento de tus datos, puedes ponerte en contacto con nosotros a través del correo electrónico:</p>
+                <h3 data-i18n="priv.s6.h">6. Cambios en esta Política</h3>
+                <p data-i18n="priv.s6.p1">Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. Cualquier cambio será publicado en esta página con la fecha de actualización correspondiente.</p>
+
+                <h3 data-i18n="priv.s7.h">7. Contacto</h3>
+                <p data-i18n="priv.s7.p1">Si tienes alguna pregunta sobre esta Política de Privacidad o el tratamiento de tus datos, puedes ponerte en contacto con nosotros a través del correo electrónico:</p>
                 <p><strong>titinagamescontacto@gmail.com</strong></p>
             </div>
         </div>
@@ -167,17 +179,19 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-links">
-                <a href="index.html#inicio">Inicio</a>
-                <a href="index.html#games">Juegos</a>
-                <a href="index.html#about">Nosotros</a>
-                <a href="index.html#contact">Soporte</a>
-                <a href="privacidad.html">Política de Privacidad</a>
-                <a href="terminos.html">Términos y Condiciones</a>
+                <a href="index.html#inicio" data-i18n="nav.home">Inicio</a>
+                <a href="index.html#games" data-i18n="nav.games">Juegos</a>
+                <a href="index.html#about" data-i18n="nav.about">Nosotros</a>
+                <a href="index.html#contact" data-i18n="footer.support">Soporte</a>
+                <a href="privacidad.html" data-i18n="footer.privacy">Política de Privacidad</a>
+                <a href="terminos.html" data-i18n="footer.terms">Términos y Condiciones</a>
             </div>
-            <p>&copy; 2026 Titina Games. Todos los derechos reservados.</p>
+            <p data-i18n="footer.rights">&copy; 2026 Titina Games. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script src="script.js?v=1.7"></script>
+    <script src="i18n.js?v=2.0"></script>
+    <script src="legal.js?v=2.0"></script>
+    <script src="script.js?v=2.0"></script>
 </body>
 </html>
