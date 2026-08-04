@@ -1,6 +1,12 @@
 google.com, pub-6969581654563972, DIRECT, f08c47fec0942fa0
 
 #Adverty app-ads.txt BEGIN
+pixelpluses.com,236015,RESELLER
+adyoulike.com,4ad745ead2958bf7,RESELLER
+sabio.us,100229,RESELLER,96ed93aaa9795702
+adsmovil.com,JKHGrlkjds47,RESELLER
+33across.com,001Pg00001aSzL4IAK,RESELLER
+anzu.io,6a3922d7e4fda28e5502502c,RESELLER
 smartadserver.com, 4865, RESELLER
 conversantmedia.com, 100308, RESELLER, 03113cd04947736d
 lijit.com, 367236, RESELLER, fafdf38b16bf6b2b
