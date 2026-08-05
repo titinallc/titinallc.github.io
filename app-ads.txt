@@ -1,6 +1,13 @@
 google.com, pub-6969581654563972, DIRECT, f08c47fec0942fa0
 
 #Adverty app-ads.txt BEGIN
+onetag.com,6edfae7c05e75eb,RESELLER
+hax.ortb.net,657462,RESELLER
+admanmedia.com,2425,RESELLER
+admanmedia.com,2426,RESELLER
+iion.io,10029,RESELLER,013a29748465dc57
+lijit.com,564990,RESELLER,fafdf38b16bf6b2b
+appnexus.com,14416,RESELLER,f5ab79cb980f11d1
 pixelpluses.com,236015,RESELLER
 adyoulike.com,4ad745ead2958bf7,RESELLER
 sabio.us,100229,RESELLER,96ed93aaa9795702
