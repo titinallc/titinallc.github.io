@@ -1,6 +1,27 @@
 google.com, pub-6969581654563972, DIRECT, f08c47fec0942fa0
 
 #Adverty app-ads.txt BEGIN
+conversantmedia.com,101282,RESELLER
+appnexus.com,11470,RESELLER
+revealon.media,18049,DIRECT
+smartadserver.com,5951,RESELLER,060d053dcf45cbf3
+ogury.com,b9e5e50a-f2b8-4e98-844f-723f37e74c47,RESELLER
+mangomob.net,5100672008,RESELLER
+inmobi.com,966ff31f49944e4092fcd6ba8d6b3c4d,RESELLER,83e75a7ae333ca9d
+lijit.com,560797,RESELLER,fafdf38b16bf6b2b#sovrn
+pubmatic.com,163238,RESELLER,5d62403b186f2ace
+video.unrulymedia.com,802014076,RESELLER,98c21ef9a666c68b
+sharethrough.com,5951,RESELLER,060d053dcf45cbf3
+onetag.com,969f41d776e4d69,RESELLER
+smartadserver.com,4537,RESELLER,060d053dcf45cbf3
+onetag.com,970fb1c18d97d94,RESELLER
+lijit.com,595809,RESELLER,fafdf38b16bf6b2b
+adagio.io,1636,RESELLER
+rubiconproject.com,25198,RESELLER,0bfd66d529a55807
+video.unrulymedia.com,533898005,RESELLER
+revealon.media,18031,RESELLER
+revealon.media,18048,RESELLER
+revealon.media,18051,DIRECT
 onetag.com,6edfae7c05e75eb,RESELLER
 hax.ortb.net,657462,RESELLER
 admanmedia.com,2425,RESELLER
