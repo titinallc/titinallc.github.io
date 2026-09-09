@@ -534,6 +534,9 @@ rubiconproject.com, 27784, RESELLER, 0bfd66d529a55807
 #Odeeo app-ads.txt BEGIN
 inventorypartnerdomain=odeeo.io
 odeeo.io,143138352,DIRECT
+media.net,8CU2LMRU0,RESELLER
+adswizz.com,371,RESELLER
+smilewanted.com,5860,RESELLER
 triplelift.com,14713,RESELLER,6c33edb13117fd86
 appnexus.com,11898,DIRECT,f5ab79cb980f11d1
 rubiconproject.com,12496,DIRECT,0bfd66d529a55807
@@ -562,10 +565,8 @@ adswizz.com,361,RESELLER
 adswizz.com,77,RESELLER
 adswizz.com,330,RESELLER
 targetspot.com,213,RESELLER,feb28ed826dcf532
-smilewanted.com,5860,RESELLER
 33across.com,001Pg00002AKBOvIAP,DIRECT
 onetag.com,9700797f0850488,RESELLER
-pgamssp.com,69fdec1b0ea647b8530e2114,RESELLER
 axis-marketplace.com,263,RESELLER
 apexflowsdk.com,98573,RESELLER,c04b215ax
 sonobi.com,d121fc6e49,RESELLER,d1a215d9eb5aee9e
@@ -583,7 +584,6 @@ display.io,2520,DIRECT
 richaudience.com,bUYZXR5jAX,DIRECT
 novicue.com,pub1012,RESELLER,aec3f6f87bcd4418
 adtonos.com,PUB1200124850,DIRECT
-thisisdax.com,5456,RESELLER
 improvedigital.com,2730,RESELLER
 targetspot.com,453,RESELLER,feb28ed826dcf532
 rubiconproject.com,19938,RESELLER,0bfd66d529a55807
