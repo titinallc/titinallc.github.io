@@ -2,6 +2,7 @@ google.com, pub-6969581654563972, DIRECT, f08c47fec0942fa0
 
 #Adverty app-ads.txt BEGIN
 inventorypartnerdomain=adplify.ai
+spotim.market,pub_BUEWNnbmT4E6,RESELLER
 33across.com,0010b00002Xbn7QAAR,RESELLER,bbea06d9c4d2853c
 onetag.com,97c6c78c12dc1c6,RESELLER
 spotim.market,pub_ANu2xc9aN2aK,RESELLER,077e5f709d15bdbb
