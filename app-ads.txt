@@ -1,6 +1,7 @@
 google.com, pub-6969581654563972, DIRECT, f08c47fec0942fa0
 
 #Adverty app-ads.txt BEGIN
+fliwe.com,11,RESELLER
 adagio.io, 1636, RESELLER
 smartadserver.com, 4865, RESELLER
 conversantmedia.com, 100308, RESELLER, 03113cd04947736d
