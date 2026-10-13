@@ -1,6 +1,20 @@
 google.com, pub-6969581654563972, DIRECT, f08c47fec0942fa0
 
 #Adverty app-ads.txt BEGIN
+insticator.com,05dec21f-694d-4726-abe1-ac229f052409,RESELLER,b3511ffcafb23a32
+onetag.com,94c58e64d9514e2,RESELLER
+themediagrid.com,NI5YX2,RESELLER,9fac4a4a87c2a44f
+smartyads.com,746,RESELLER,fd2bde0ff2e62c5d
+lijit.com,254001,RESELLER,fafdf38b16bf6b2b
+thirdpresence.com,449,RESELLER
+richaudience.com,5wLa5vAlFn,RESELLER
+improvedigital.com,2541,RESELLER
+oko.uk,05dec21f-694d-4726-abe1-ac229f052409,RESELLER,b3511ffcafb23a32
+genieesspv.jp,s8,RESELLER
+openx.com,540705615,RESELLER,6a698e2ec38604c6
+smartadserver.com,3402,RESELLER,060d053dcf45cbf3
+adapex.io,s5640,RESELLER
+pubnative.net,1018289,RESELLER,d641df8625486a7b
 fliwe.com,11,RESELLER
 adagio.io, 1636, RESELLER
 smartadserver.com, 4865, RESELLER
