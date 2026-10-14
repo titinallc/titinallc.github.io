@@ -1,6 +1,17 @@
 google.com, pub-6969581654563972, DIRECT, f08c47fec0942fa0
 
 #Adverty app-ads.txt BEGIN
+zerodegreeads.com,2026ZD064,RESELLER
+seedtag.com,687ed5c083f27f0007016288,RESELLER
+inmobi.com,f95c07d4ea7746cfbcbb484f8c50837c,RESELLER,83e75a7ae333ca9d
+openx.com,611016950,RESELLER,6a698e2ec38604c6
+connatix.com,1901558485404293,RESELLER,2af98acdee0e81ed
+sonobi.com,4fafe55642,RESELLER,d1a215d9eb5aee9e
+sharethrough.com,4318,RESELLER,d53b998a7bd4ecd2
+conversantmedia.com,40819,RESELLER,03113cd04947736d
+genieesspv.jp,s6,RESELLER
+x.adprime.com,AjxF6R155a9M6CaTvK,RESELLER
+beachfront.com,15312,RESELLER,e2541279e8e2ca4d
 insticator.com,05dec21f-694d-4726-abe1-ac229f052409,RESELLER,b3511ffcafb23a32
 onetag.com,94c58e64d9514e2,RESELLER
 themediagrid.com,NI5YX2,RESELLER,9fac4a4a87c2a44f
