@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar cuenta - PartyDroid</title>
+    
+    <link rel="stylesheet" href="../style.css?v=2.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .privacy-content {
+            background: var(--color-glass);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--color-glass-border);
+            padding: 60px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            max-width: 900px;
+            margin: 120px auto 60px;
+        }
+        .privacy-title {
+            font-size: 2.5rem;
+            color: var(--color-primary-hover);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        .privacy-date {
+            color: #8c6c73;
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+        .privacy-text h3 {
+            font-size: 1.5rem;
+            color: var(--color-text);
+            margin: 30px 0 15px;
+            font-weight: 800;
+        }
+        .privacy-text p, .privacy-text li {
+            color: #5c3c43;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .privacy-text ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .privacy-content {
+                padding: 40px 24px;
+                margin: 100px auto 40px;
+            }
+            .privacy-title {
+                font-size: 2rem;
+            }
+            .privacy-text h3 {
+                font-size: 1.3rem;
+                margin: 24px 0 12px;
+            }
+            .privacy-text p, .privacy-text li {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .privacy-content {
+                padding: 30px 16px;
+                margin: 90px auto 30px;
+            }
+            .privacy-title {
+                font-size: 1.7rem;
+            }
+        }
+
+        /* Asegurar que la cabecera fija tenga fondo desde el inicio para evitar superposiciones con el texto al deslizar */
+        header {
+            position: fixed !important;
+            background: rgba(255, 255, 255, 0.9) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05) !important;
+        }
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.9) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-wrapper">
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <a href="../index.html"><img src="../assets/logo.png" alt="Titina Games Logo" class="logo-img"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html#inicio" data-i18n="nav.home">Inicio</a></li>
+                    <li><a href="../index.html#games" data-i18n="nav.games">Juegos</a></li>
+                    <li><a href="../index.html#about" data-i18n="nav.about">Nosotros</a></li>
+                    <li><a href="../index.html#contact" data-i18n="footer.support">Soporte</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="lang-switcher" id="lang-switcher">
+                        <button class="lang-btn" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" data-i18n-aria="lang.label" aria-label="Cambiar idioma">
+                            <svg class="lang-globe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                            <span class="lang-code" id="lang-code">ES</span>
+                            <svg class="lang-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                        <ul class="lang-menu" id="lang-menu" role="listbox"></ul>
+                    </div>
+                    <button class="menu-toggle" id="mobile-menu-toggle" data-i18n-aria="nav.menu" aria-label="Abrir menú de navegación">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="privacy-content">
+            <h1 class="privacy-title" data-i18n="pd.del.title">Eliminar tu cuenta de PartyDroid</h1>
+            <p class="privacy-date" data-i18n="pd.del.updated">Última actualización: 15 de octubre de 2026</p>
+
+            <div class="privacy-text">
+                <p data-i18n-html="pd.del.intro">Puedes pedir en cualquier momento que borremos tu cuenta de <strong>PartyDroid</strong> y los datos asociados. Esta página explica cómo pedirlo y qué se borra. El Juego lo publica Titina LLC (Titina Games).</p>
+
+                <h3 data-i18n="pd.del.s1.h">Cómo pedirlo</h3>
+                <ul>
+                    <li data-i18n-html="pd.del.s1.li1">Escribe a <a href="mailto:titinagamessoporte@gmail.com">titinagamessoporte@gmail.com</a> con el asunto <strong>«Eliminar cuenta PartyDroid»</strong>.</li>
+                    <li data-i18n="pd.del.s1.li2">Indica el nombre de tu personaje en el Juego.</li>
+                    <li data-i18n="pd.del.s1.li3">Para comprobar que la cuenta es tuya, te responderemos con un código y te pediremos que lo pongas en la descripción de tu perfil dentro del Juego.</li>
+                    <li data-i18n="pd.del.s1.li4">Cuando lo confirmemos, borraremos la cuenta en un plazo máximo de 30 días y te avisaremos por correo.</li>
+                </ul>
+
+                <h3 data-i18n="pd.del.s2.h">Qué se borra</h3>
+                <p data-i18n="pd.del.s2.p1">Tu cuenta del Juego y su identificador, tu perfil, tu nombre, tu avatar, tus objetos, tu moneda virtual, tu progreso, tus estadísticas y tus posiciones en los rankings, tu lista de amigos y tus solicitudes, tu pertenencia a clubes, tus listas de silenciados y bloqueados, tus fotos y publicaciones de la Comunidad y la memoria de los personajes con IA.</p>
+
+                <h3 data-i18n="pd.del.s3.h">Qué se conserva</h3>
+                <ul>
+                    <li data-i18n="pd.del.s3.li1">Los registros de compras, durante el tiempo que exijan las leyes fiscales y contables.</li>
+                    <li data-i18n="pd.del.s3.li2">Los reportes y sanciones por incumplimientos graves, durante el tiempo necesario para proteger a la comunidad.</li>
+                    <li data-i18n="pd.del.s3.li3">Los mensajes que otros jugadores ya recibieron y lo que hayan copiado fuera de nuestro control.</li>
+                </ul>
+                <p data-i18n="pd.del.s3.p1">El borrado es definitivo: perderás todo tu progreso y tu Contenido Virtual, incluido el comprado, y no se podrá recuperar.</p>
+
+                <h3 data-i18n="pd.del.s4.h">Acceso de tu cuenta de Google</h3>
+                <p data-i18n-html="pd.del.s4.p1">Borrar tu cuenta del Juego no borra tu cuenta de Google. Si además quieres quitarle a PartyDroid el acceso a tu cuenta de Google, hazlo en <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">tu cuenta de Google &gt; Apps y servicios conectados</a>.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="../index.html#inicio" data-i18n="nav.home">Inicio</a>
+                <a href="privacidad.html" data-i18n="pd.foot.privacy">Privacidad de PartyDroid</a>
+                <a href="terminos.html" data-i18n="pd.foot.terms">Términos de PartyDroid</a>
+                <a href="eliminar-cuenta.html" data-i18n="pd.foot.delete">Eliminar cuenta</a>
+            </div>
+            <p data-i18n="footer.rights">&copy; 2026 Titina Games. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../i18n.js?v=2.0"></script>
+    <script src="legal-partydroid.js?v=1"></script>
+    <script src="../script.js?v=2.0"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones - PartyDroid</title>
+    
+    <link rel="stylesheet" href="../style.css?v=2.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .privacy-content {
+            background: var(--color-glass);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--color-glass-border);
+            padding: 60px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            max-width: 900px;
+            margin: 120px auto 60px;
+        }
+        .privacy-title {
+            font-size: 2.5rem;
+            color: var(--color-primary-hover);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        .privacy-date {
+            color: #8c6c73;
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+        .privacy-text h3 {
+            font-size: 1.5rem;
+            color: var(--color-text);
+            margin: 30px 0 15px;
+            font-weight: 800;
+        }
+        .privacy-text p, .privacy-text li {
+            color: #5c3c43;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .privacy-text ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .privacy-content {
+                padding: 40px 24px;
+                margin: 100px auto 40px;
+            }
+            .privacy-title {
+                font-size: 2rem;
+            }
+            .privacy-text h3 {
+                font-size: 1.3rem;
+                margin: 24px 0 12px;
+            }
+            .privacy-text p, .privacy-text li {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .privacy-content {
+                padding: 30px 16px;
+                margin: 90px auto 30px;
+            }
+            .privacy-title {
+                font-size: 1.7rem;
+            }
+        }
+
+        /* Asegurar que la cabecera fija tenga fondo desde el inicio para evitar superposiciones con el texto al deslizar */
+        header {
+            position: fixed !important;
+            background: rgba(255, 255, 255, 0.9) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05) !important;
+        }
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.9) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-wrapper">
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <a href="../index.html"><img src="../assets/logo.png" alt="Titina Games Logo" class="logo-img"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html#inicio" data-i18n="nav.home">Inicio</a></li>
+                    <li><a href="../index.html#games" data-i18n="nav.games">Juegos</a></li>
+                    <li><a href="../index.html#about" data-i18n="nav.about">Nosotros</a></li>
+                    <li><a href="../index.html#contact" data-i18n="footer.support">Soporte</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="lang-switcher" id="lang-switcher">
+                        <button class="lang-btn" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" data-i18n-aria="lang.label" aria-label="Cambiar idioma">
+                            <svg class="lang-globe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                            <span class="lang-code" id="lang-code">ES</span>
+                            <svg class="lang-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                        <ul class="lang-menu" id="lang-menu" role="listbox"></ul>
+                    </div>
+                    <button class="menu-toggle" id="mobile-menu-toggle" data-i18n-aria="nav.menu" aria-label="Abrir menú de navegación">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="privacy-content">
+            <h1 class="privacy-title" data-i18n="pd.terms.title">Términos y Condiciones de PartyDroid</h1>
+            <p class="privacy-date" data-i18n="pd.terms.updated">Última actualización: 15 de octubre de 2026</p>
+
+            <div class="privacy-text">
+                <p data-i18n-html="pd.terms.intro">Estos Términos y Condiciones (los «Términos») regulan el uso de <strong>PartyDroid</strong> (el «Juego»), incluida la Comunidad que se abre dentro de él. El Juego lo ofrece <strong>Titina LLC</strong>, que opera como <strong>Titina Games</strong> («nosotros»). Al marcar las casillas de aceptación o al usar el Juego, aceptas estos Términos y nuestra <a href="privacidad.html">Política de Privacidad</a>. Si no estás de acuerdo, no uses el Juego.</p>
+
+                <h3 data-i18n="pd.terms.s1.h">1. Quién puede jugar</h3>
+                <p data-i18n="pd.terms.s1.p1">Debes tener al menos 13 años. Si eres menor de edad según la ley de tu país, necesitas el permiso de tu padre, madre o tutor, que acepta estos Términos en tu nombre y es responsable de tu uso del Juego, incluidas las compras.</p>
+
+                <h3 data-i18n="pd.terms.s2.h">2. Tu cuenta</h3>
+                <p data-i18n="pd.terms.s2.p1">Entras al Juego con tu cuenta de Google. Tu cuenta es personal: no la compartas, vendas, prestes ni transfieras. Eres responsable de lo que ocurra con ella y de mantener segura tu cuenta de Google. Podemos pedirte que cambies un nombre que incumpla estos Términos.</p>
+
+                <h3 data-i18n="pd.terms.s3.h">3. Licencia de uso</h3>
+                <p data-i18n="pd.terms.s3.p1">Te damos una licencia personal, limitada, no exclusiva, intransferible y revocable para usar el Juego con fines de entretenimiento personal y no comercial. Todo el Juego (código, gráficos, personajes, música, nombres y marcas) es propiedad de Titina Games o de sus licenciantes, y no adquieres ningún derecho de propiedad sobre él.</p>
+
+                <h3 data-i18n="pd.terms.s4.h">4. Normas de conducta</h3>
+                <p data-i18n="pd.terms.s4.p1">PartyDroid es un espacio social compartido. Al jugar te comprometes a no:</p>
+                <ul>
+                    <li data-i18n="pd.terms.s4.li1">Acosar, amenazar, insultar o discriminar a otras personas, ni incitar al odio.</li>
+                    <li data-i18n="pd.terms.s4.li2">Escribir, decir o publicar contenido sexual, violento, ilegal o inapropiado para menores, ni en el chat, ni en la voz, ni en tu nombre, tu perfil, tus fotos o tus publicaciones.</li>
+                    <li data-i18n="pd.terms.s4.li3">Compartir datos personales tuyos o de otros (teléfonos, direcciones, redes sociales) ni intentar llevar a otros jugadores, sobre todo a menores, a otras plataformas.</li>
+                    <li data-i18n="pd.terms.s4.li4">Hacerte pasar por otra persona, por un moderador o por Titina Games.</li>
+                    <li data-i18n="pd.terms.s4.li5">Hacer spam, estafas o publicidad, ni comerciar con dinero real con cuentas, objetos o moneda del Juego.</li>
+                    <li data-i18n="pd.terms.s4.li6">Usar trampas, bots, hacks, versiones modificadas del Juego, exploits o cualquier programa no autorizado, ni aprovechar errores del Juego en lugar de reportarlos.</li>
+                    <li data-i18n="pd.terms.s4.li7">Descompilar o alterar el Juego, ni atacar, sobrecargar o acceder sin permiso a nuestros servidores o a los de nuestros proveedores.</li>
+                    <li data-i18n="pd.terms.s4.li8">Intentar que los personajes con IA digan contenido ofensivo o dañino, ni abusar del sistema de reportes.</li>
+                </ul>
+                <p data-i18n="pd.terms.s4.p2">Usa los botones de silenciar, bloquear y reportar cuando alguien te incomode.</p>
+
+                <h3 data-i18n="pd.terms.s5.h">5. Contenido de los jugadores</h3>
+                <p data-i18n="pd.terms.s5.p1">Eres responsable de lo que escribes, dices, publicas o compartes («Tu Contenido»). Tu Contenido sigue siendo tuyo, pero nos das una licencia mundial, gratuita y no exclusiva para alojarlo, mostrarlo, reproducirlo y distribuirlo dentro del Juego y de la Comunidad mientras sea necesario para prestar el servicio. Podemos filtrar automáticamente, ocultar o eliminar cualquier contenido que incumpla estos Términos, aunque no estamos obligados a revisar todo lo que publican los jugadores. Lo que publican otros jugadores es responsabilidad de ellos.</p>
+
+                <h3 data-i18n="pd.terms.s6.h">6. Chat, voz y moderación</h3>
+                <p data-i18n="pd.terms.s6.p1">El chat de texto y de voz te conecta en tiempo real con personas que no conocemos. El texto pasa por un filtro automático, pero ningún filtro es perfecto. La voz no se graba, así que reporta los problemas de voz en el momento. Podemos revisar los reportes y aplicar sanciones automáticas o manuales.</p>
+
+                <h3 data-i18n="pd.terms.s7.h">7. Personajes con inteligencia artificial</h3>
+                <p data-i18n="pd.terms.s7.p1">Algunos personajes del Juego responden con inteligencia artificial. Sus respuestas se generan automáticamente, pueden ser inexactas o inesperadas, no representan nuestras opiniones y no son consejos de ningún tipo. No compartas datos personales con ellos. Su uso tiene límites diarios.</p>
+
+                <h3 data-i18n="pd.terms.s8.h">8. Compras, moneda virtual y objetos</h3>
+                <p data-i18n="pd.terms.s8.p1">Puedes comprar con dinero real moneda virtual, objetos, pases y otros contenidos digitales («Contenido Virtual»). Los pagos los procesa Google Play bajo sus propios términos. El Contenido Virtual es una licencia limitada para usarlo dentro del Juego: no es de tu propiedad, no tiene valor en dinero real, no se puede canjear por dinero, no se puede transferir a otras cuentas y no se puede vender ni intercambiar fuera del Juego.</p>
+                <p data-i18n="pd.terms.s8.p2">Salvo que la ley aplicable o las políticas de Google Play digan otra cosa, las compras son definitivas y no reembolsables. Los reembolsos se solicitan a través de Google Play. Si se devuelve o anula una compra, podemos retirar el Contenido Virtual correspondiente.</p>
+                <p data-i18n="pd.terms.s8.p3">Podemos cambiar precios, ofertas y el Contenido Virtual disponible, y algunos objetos de eventos o temporadas solo están disponibles durante un tiempo. Cuando el Juego ofrezca recompensas aleatorias que se consigan con contenido comprado con dinero real, mostraremos sus probabilidades antes de la compra.</p>
+                <p data-i18n="pd.terms.s8.p4">Si cerramos tu cuenta por incumplir estos Términos, pierdes el Contenido Virtual sin derecho a reembolso, salvo donde la ley lo exija.</p>
+
+                <h3 data-i18n="pd.terms.s9.h">9. Publicidad</h3>
+                <p data-i18n-html="pd.terms.s9.p1">El Juego muestra anuncios de terceros: anuncios de Google AdMob y anuncios 3D de Adverty integrados en el mundo del Juego. No respaldamos los productos anunciados ni somos responsables de ellos. Cómo se usan tus datos para la publicidad y cómo elegir anuncios no personalizados se explica en la <a href="privacidad.html">Política de Privacidad</a>.</p>
+
+                <h3 data-i18n="pd.terms.s10.h">10. Servicios de terceros</h3>
+                <p data-i18n-html="pd.terms.s10.p1">Algunas funciones dependen de servicios de terceros, como el inicio de sesión de Google o los vídeos de YouTube del cine del Juego, y su uso está sujeto también a los términos de esos servicios (por ejemplo, los <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">Términos del Servicio de YouTube</a>). No controlamos esos servicios ni el contenido que muestran.</p>
+
+                <h3 data-i18n="pd.terms.s11.h">11. Cambios en el Juego y disponibilidad</h3>
+                <p data-i18n="pd.terms.s11.p1">El Juego evoluciona: podemos añadir, cambiar o quitar funciones, mapas, eventos u objetos, y hacer tareas de mantenimiento. No garantizamos que el Juego esté siempre disponible ni libre de errores. Si dejamos de ofrecer el Juego, avisaremos con una antelación razonable dentro del Juego o en nuestra web.</p>
+
+                <h3 data-i18n="pd.terms.s12.h">12. Suspensión y cierre de cuentas</h3>
+                <p data-i18n-html="pd.terms.s12.p1">Si incumples estos Términos, podemos avisarte, silenciarte, suspender tu cuenta o cerrarla, de forma temporal o definitiva, según la gravedad. Puedes dejar de jugar cuando quieras y pedir que borremos tu cuenta, como se explica en <a href="eliminar-cuenta.html">Eliminar tu cuenta de PartyDroid</a>.</p>
+
+                <h3 data-i18n="pd.terms.s13.h">13. Garantías y responsabilidad</h3>
+                <p data-i18n="pd.terms.s13.p1">El Juego se ofrece «tal cual» y «según disponibilidad». En la medida máxima que permita la ley, Titina Games no responde de daños indirectos, de la pérdida de datos o de beneficios, ni de la conducta de otros jugadores o de servicios de terceros, y nuestra responsabilidad total no superará lo que hayas pagado en el Juego durante los 12 meses anteriores al hecho, o 100 dólares estadounidenses si esa cantidad es mayor. Nada de esto limita los derechos que te reconozca la ley de protección del consumidor de tu país y que no se puedan excluir.</p>
+
+                <h3 data-i18n="pd.terms.s14.h">14. Ley aplicable y reclamaciones</h3>
+                <p data-i18n="pd.terms.s14.p1">Estos Términos se rigen por las leyes del Estado de Wyoming (Estados Unidos), sin aplicar sus normas sobre conflicto de leyes. Antes de iniciar cualquier reclamación, escríbenos para intentar resolverla de forma amistosa. Si vives en la Unión Europea, el Reino Unido u otro país cuya ley te proteja como consumidor, conservas esa protección y puedes reclamar ante los tribunales de tu país de residencia.</p>
+
+                <h3 data-i18n="pd.terms.s15.h">15. Cambios en estos Términos</h3>
+                <p data-i18n="pd.terms.s15.p1">Podemos actualizar estos Términos. Si el cambio es importante, te pediremos aceptarlos de nuevo dentro del Juego; si no los aceptas, no podrás seguir usando el Juego.</p>
+
+                <h3 data-i18n="pd.terms.s16.h">16. Contacto</h3>
+                <p data-i18n-html="pd.terms.s16.p1">Titina LLC (Titina Games) · 30 N Gould St, Sheridan, WY 82801, Estados Unidos · <a href="mailto:titinagamessoporte@gmail.com">titinagamessoporte@gmail.com</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="../index.html#inicio" data-i18n="nav.home">Inicio</a>
+                <a href="privacidad.html" data-i18n="pd.foot.privacy">Privacidad de PartyDroid</a>
+                <a href="terminos.html" data-i18n="pd.foot.terms">Términos de PartyDroid</a>
+                <a href="eliminar-cuenta.html" data-i18n="pd.foot.delete">Eliminar cuenta</a>
+            </div>
+            <p data-i18n="footer.rights">&copy; 2026 Titina Games. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../i18n.js?v=2.0"></script>
+    <script src="legal-partydroid.js?v=1"></script>
+    <script src="../script.js?v=2.0"></script>
+</body>
+</html>

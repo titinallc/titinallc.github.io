@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - PartyDroid</title>
+    
+    <link rel="stylesheet" href="../style.css?v=2.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .privacy-content {
+            background: var(--color-glass);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--color-glass-border);
+            padding: 60px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            max-width: 900px;
+            margin: 120px auto 60px;
+        }
+        .privacy-title {
+            font-size: 2.5rem;
+            color: var(--color-primary-hover);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        .privacy-date {
+            color: #8c6c73;
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+        .privacy-text h3 {
+            font-size: 1.5rem;
+            color: var(--color-text);
+            margin: 30px 0 15px;
+            font-weight: 800;
+        }
+        .privacy-text p, .privacy-text li {
+            color: #5c3c43;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .privacy-text ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .privacy-content {
+                padding: 40px 24px;
+                margin: 100px auto 40px;
+            }
+            .privacy-title {
+                font-size: 2rem;
+            }
+            .privacy-text h3 {
+                font-size: 1.3rem;
+                margin: 24px 0 12px;
+            }
+            .privacy-text p, .privacy-text li {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .privacy-content {
+                padding: 30px 16px;
+                margin: 90px auto 30px;
+            }
+            .privacy-title {
+                font-size: 1.7rem;
+            }
+        }
+
+        /* Asegurar que la cabecera fija tenga fondo desde el inicio para evitar superposiciones con el texto al deslizar */
+        header {
+            position: fixed !important;
+            background: rgba(255, 255, 255, 0.9) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05) !important;
+        }
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.9) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-wrapper">
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <a href="../index.html"><img src="../assets/logo.png" alt="Titina Games Logo" class="logo-img"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html#inicio" data-i18n="nav.home">Inicio</a></li>
+                    <li><a href="../index.html#games" data-i18n="nav.games">Juegos</a></li>
+                    <li><a href="../index.html#about" data-i18n="nav.about">Nosotros</a></li>
+                    <li><a href="../index.html#contact" data-i18n="footer.support">Soporte</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="lang-switcher" id="lang-switcher">
+                        <button class="lang-btn" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" data-i18n-aria="lang.label" aria-label="Cambiar idioma">
+                            <svg class="lang-globe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                            <span class="lang-code" id="lang-code">ES</span>
+                            <svg class="lang-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                        <ul class="lang-menu" id="lang-menu" role="listbox"></ul>
+                    </div>
+                    <button class="menu-toggle" id="mobile-menu-toggle" data-i18n-aria="nav.menu" aria-label="Abrir menú de navegación">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="privacy-content">
+            <h1 class="privacy-title" data-i18n="pd.priv.title">Política de Privacidad de PartyDroid</h1>
+            <p class="privacy-date" data-i18n="pd.priv.updated">Última actualización: 15 de octubre de 2026</p>
+
+            <div class="privacy-text">
+                <p data-i18n-html="pd.priv.intro">Esta Política de Privacidad explica qué información recoge <strong>PartyDroid</strong> (el «Juego»), para qué la usamos, con quién la compartimos y qué derechos tienes. El Juego lo publica <strong>Titina LLC</strong>, que opera con el nombre comercial <strong>Titina Games</strong> («nosotros»). Esta política se aplica al Juego y a la Comunidad que se abre dentro de él (comunidad.titinagames.com). Nuestros otros juegos se rigen por la <a href="../privacidad.html">política general de Titina Games</a>.</p>
+
+                <h3 data-i18n="pd.priv.s1.h">1. Quién es responsable</h3>
+                <p data-i18n-html="pd.priv.s1.p1">El responsable de tus datos es Titina LLC, sociedad de responsabilidad limitada de Wyoming (Estados Unidos), con domicilio en 30 N Gould St, Sheridan, WY 82801, Estados Unidos. Para cualquier asunto de privacidad escríbenos a <a href="mailto:titinagamessoporte@gmail.com">titinagamessoporte@gmail.com</a>.</p>
+
+                <h3 data-i18n="pd.priv.s2.h">2. Información que recogemos</h3>
+                <p data-i18n="pd.priv.s2.p1">Recogemos lo necesario para que puedas jugar en línea con otras personas, proteger a la comunidad y mantener el Juego gratuito. Según cómo uses el Juego, esto incluye:</p>
+                <ul>
+                    <li data-i18n-html="pd.priv.s2.li1"><strong>Cuenta.</strong> Inicias sesión con tu cuenta de Google. Google nos envía un identificador único de esa cuenta, que usamos para crear y abrir tu cuenta del Juego. Google también puede incluir tu nombre, tu correo electrónico y tu foto de perfil; solo los usamos para iniciar sesión y nunca los mostramos a otros jugadores. Tu cuenta del Juego tiene además su propio identificador de jugador.</li>
+                    <li data-i18n-html="pd.priv.s2.li2"><strong>Perfil y progreso.</strong> El nombre que eliges en el Juego, tu avatar y su apariencia, tu icono y marco, tu descripción, tu personaje favorito, tus objetos, tu moneda virtual, tu progreso en el pase de temporada y en los eventos, tus estadísticas, victorias y posiciones en los rankings, y la fecha de creación de tu cuenta.</li>
+                    <li data-i18n-html="pd.priv.s2.li3"><strong>Funciones sociales.</strong> Tu lista de amigos y tus solicitudes de amistad, tu estado en línea y el mapa en el que estás (lo ven tus amigos), los clubes a los que perteneces y las listas de jugadores que silenciaste o bloqueaste.</li>
+                    <li data-i18n-html="pd.priv.s2.li4"><strong>Chat de texto.</strong> Los mensajes que escribes en las salas y los mensajes privados a tus amigos. Antes de mostrarse pasan por un filtro automático que oculta insultos, contenido sexual, amenazas y datos de contacto.</li>
+                    <li data-i18n-html="pd.priv.s2.li5"><strong>Chat de voz.</strong> Si usas el micrófono, tu voz se transmite en tiempo real a los jugadores que están cerca de ti. No grabamos ni guardamos el audio. El Juego solo usa el micrófono si le das permiso.</li>
+                    <li data-i18n-html="pd.priv.s2.li6"><strong>Personajes con inteligencia artificial.</strong> Cuando hablas con un personaje con IA, el texto que le escribes y tu nombre en el Juego se envían a nuestro servidor y a un proveedor de inteligencia artificial que genera la respuesta. Guardamos una memoria breve asociada a tu cuenta (unos pocos datos que el personaje recuerda de ti). No escribas datos personales en esas conversaciones.</li>
+                    <li data-i18n-html="pd.priv.s2.li7"><strong>Fotos y publicaciones en la Comunidad.</strong> Las fotos que tomas en el Juego y decides compartir, y lo que publicas en la Comunidad. Las fotos se reducen de tamaño y se guardan en nuestro servidor.</li>
+                    <li data-i18n-html="pd.priv.s2.li8"><strong>Reportes y moderación.</strong> Los reportes que envías o que otros envían sobre ti (motivo y comentario) y las sanciones aplicadas a una cuenta.</li>
+                    <li data-i18n-html="pd.priv.s2.li9"><strong>Compras.</strong> Si compras algo con dinero real, el pago lo procesa Google Play. Nosotros recibimos la confirmación de la compra (producto, fecha e identificador del pedido), nunca los datos de tu tarjeta ni de tu medio de pago.</li>
+                    <li data-i18n-html="pd.priv.s2.li10"><strong>Datos técnicos.</strong> Tu dirección IP y la ubicación aproximada que se deduce de ella (país o ciudad), el modelo y el sistema operativo de tu dispositivo, el idioma, la versión del Juego, identificadores técnicos que generan nuestros proveedores de juego en línea y de voz, y registros de conexión de nuestros servidores.</li>
+                    <li data-i18n-html="pd.priv.s2.li11"><strong>Publicidad.</strong> Nuestros socios publicitarios (Google AdMob y Adverty) recogen el identificador de publicidad de tu dispositivo, datos del dispositivo, tu dirección IP y cómo interactúas con los anuncios: por ejemplo, impresiones, clics y, en los anuncios 3D dentro del mundo del Juego, si el anuncio estuvo a la vista y durante cuánto tiempo.</li>
+                    <li data-i18n-html="pd.priv.s2.li12"><strong>Preferencias guardadas en tu dispositivo.</strong> El idioma elegido, tu aceptación de estos documentos y de la edad mínima, y los ajustes del Juego.</li>
+                </ul>
+                <p data-i18n="pd.priv.s2.p2">No recogemos tu ubicación precisa (GPS), tus contactos ni tus archivos, y no te pedimos tu número de teléfono.</p>
+
+                <h3 data-i18n="pd.priv.s3.h">3. Para qué usamos la información</h3>
+                <ul>
+                    <li data-i18n="pd.priv.s3.li1">Crear y mantener tu cuenta, guardar tu progreso y permitirte entrar desde cualquier dispositivo.</li>
+                    <li data-i18n="pd.priv.s3.li2">Hacer funcionar el juego en línea: salas, minijuegos, amigos, clubes, chat, voz, rankings y eventos.</li>
+                    <li data-i18n="pd.priv.s3.li3">Entregarte lo que compras y gestionar tu moneda virtual y tus objetos.</li>
+                    <li data-i18n="pd.priv.s3.li4">Mostrar anuncios, personalizados o no según tus elecciones y la ley de tu país.</li>
+                    <li data-i18n="pd.priv.s3.li5">Proteger a los jugadores: filtrar el chat, atender reportes, aplicar sanciones, detectar trampas, fraudes y abusos, y mantener seguros nuestros servidores.</li>
+                    <li data-i18n="pd.priv.s3.li6">Generar las respuestas de los personajes con IA.</li>
+                    <li data-i18n="pd.priv.s3.li7">Atender tus consultas de soporte y tus solicitudes de privacidad.</li>
+                    <li data-i18n="pd.priv.s3.li8">Corregir errores y mejorar el Juego.</li>
+                    <li data-i18n="pd.priv.s3.li9">Cumplir obligaciones legales y defender nuestros derechos.</li>
+                </ul>
+
+                <h3 data-i18n="pd.priv.s4.h">4. Bases legales (EEE, Reino Unido y Suiza)</h3>
+                <p data-i18n-html="pd.priv.s4.p1">Si vives en el Espacio Económico Europeo, el Reino Unido o Suiza, tratamos tus datos sobre estas bases: la <strong>ejecución del contrato</strong> que aceptas al jugar (cuenta, progreso, funciones en línea y compras); nuestro <strong>interés legítimo</strong> en mantener el Juego seguro y justo (moderación, prevención de trampas y fraude, seguridad de los servidores y mejoras); tu <strong>consentimiento</strong> para la publicidad personalizada y el uso del micrófono, que puedes retirar en cualquier momento; y el cumplimiento de <strong>obligaciones legales</strong>.</p>
+
+                <h3 data-i18n="pd.priv.s5.h">5. Qué ven otros jugadores</h3>
+                <p data-i18n="pd.priv.s5.p1">Algunos datos son visibles dentro del Juego por su propia naturaleza: tu nombre, tu avatar, tu icono, tu perfil, tus estadísticas, tus posiciones en los rankings y tus clubes, los mensajes que envías a una sala, tu voz en el chat de voz y las fotos y publicaciones que compartes en la Comunidad. Tus amigos ven además si estás en línea y en qué mapa. Piensa antes de compartir: lo que otros jugadores ven o escuchan pueden copiarlo.</p>
+
+                <h3 data-i18n="pd.priv.s6.h">6. Con quién compartimos la información</h3>
+                <p data-i18n="pd.priv.s6.p1">No vendemos tu información personal a cambio de dinero. La compartimos solo con los proveedores que nos ayudan a operar el Juego:</p>
+                <ul>
+                    <li data-i18n-html="pd.priv.s6.li1"><strong>Google</strong> (Estados Unidos): inicio de sesión con Google, pagos de Google Play y anuncios de Google AdMob.</li>
+                    <li data-i18n-html="pd.priv.s6.li2"><strong>Microsoft Azure PlayFab</strong> (Estados Unidos): cuentas de jugador, progreso, objetos, compras y reportes.</li>
+                    <li data-i18n-html="pd.priv.s6.li3"><strong>Photon (Exit Games)</strong> (Alemania, con servidores en varias regiones): conexión en tiempo real con otros jugadores.</li>
+                    <li data-i18n-html="pd.priv.s6.li4"><strong>Unity Technologies (Vivox)</strong> (Estados Unidos): chat de voz y de texto.</li>
+                    <li data-i18n-html="pd.priv.s6.li5"><strong>Adverty</strong> (Suecia): anuncios 3D integrados en el mundo del Juego.</li>
+                    <li data-i18n-html="pd.priv.s6.li6"><strong>DeepSeek</strong> (China): genera las respuestas de los personajes con IA. Recibe el texto que les escribes, tu nombre en el Juego y la memoria breve de la conversación; no recibe tu correo electrónico ni los datos de tu cuenta de Google.</li>
+                    <li data-i18n-html="pd.priv.s6.li7"><strong>Contabo</strong> (Alemania; servidores en la Unión Europea): aloja nuestro servidor de la Comunidad, de amigos y de personajes con IA.</li>
+                    <li data-i18n-html="pd.priv.s6.li8"><strong>Cloudflare</strong> (Estados Unidos): protege y entrega nuestras páginas web y el servidor de la Comunidad.</li>
+                    <li data-i18n-html="pd.priv.s6.li9"><strong>YouTube</strong> (Google): en el cine del Juego, los vídeos que eligen los jugadores se cargan directamente desde YouTube, que recibe tu dirección IP y datos técnicos de tu dispositivo según su propia política de privacidad.</li>
+                </ul>
+                <p data-i18n="pd.priv.s6.p2">También podemos revelar información si la ley nos obliga, para proteger la seguridad de cualquier persona o los derechos de Titina Games, o si la empresa o el Juego pasan a otro titular; en ese caso, esta política seguirá protegiendo tus datos.</p>
+
+                <h3 data-i18n="pd.priv.s7.h">7. Publicidad</h3>
+                <p data-i18n="pd.priv.s7.p1">PartyDroid es gratuito y se financia en parte con publicidad. Google AdMob puede mostrar anuncios en pantalla y Adverty muestra anuncios 3D en vallas y objetos del mundo del Juego. Donde la ley lo exige (por ejemplo, en el EEE, el Reino Unido y algunos estados de EE. UU.), te pediremos tu elección antes de mostrarte publicidad personalizada y podrás cambiarla después en los ajustes del Juego. Si no das tu consentimiento, los anuncios no serán personalizados.</p>
+                <ul>
+                    <li data-i18n-html="pd.priv.s7.li1"><strong>En Android:</strong> en Ajustes &gt; Google &gt; Anuncios (o Ajustes &gt; Privacidad &gt; Anuncios) puedes restablecer o eliminar tu ID de publicidad.</li>
+                    <li data-i18n-html="pd.priv.s7.li2">Más información: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">cómo usa Google los datos en la publicidad</a> y <a href="https://adverty.com/privacy-policy/" target="_blank" rel="noopener">política de privacidad de Adverty</a>.</li>
+                </ul>
+
+                <h3 data-i18n="pd.priv.s8.h">8. Transferencias internacionales</h3>
+                <p data-i18n="pd.priv.s8.p1">Titina LLC está en Estados Unidos y nuestros proveedores tratan datos en Estados Unidos, la Unión Europea, China y otros países, que pueden tener leyes de protección de datos distintas a las del tuyo. Cuando la ley lo exige, usamos garantías adecuadas, como las cláusulas contractuales tipo aprobadas por la Comisión Europea.</p>
+
+                <h3 data-i18n="pd.priv.s9.h">9. Cuánto tiempo guardamos los datos</h3>
+                <ul>
+                    <li data-i18n-html="pd.priv.s9.li1"><strong>Cuenta, perfil, progreso, objetos, amigos y clubes:</strong> mientras tu cuenta exista. Si pides borrarla, la eliminamos en un plazo máximo de 30 días.</li>
+                    <li data-i18n-html="pd.priv.s9.li2"><strong>Chat de voz:</strong> no se graba ni se guarda.</li>
+                    <li data-i18n-html="pd.priv.s9.li3"><strong>Chat de texto:</strong> los mensajes de las salas se transmiten en tiempo real y no los guardamos. Los mensajes privados entre amigos pueden conservarse un tiempo limitado en el servicio de chat para mostrarte el historial de la conversación.</li>
+                    <li data-i18n-html="pd.priv.s9.li4"><strong>Personajes con IA:</strong> la conversación reciente se borra automáticamente al poco tiempo; los datos que el personaje recuerda de ti se guardan hasta que borres tu cuenta.</li>
+                    <li data-i18n-html="pd.priv.s9.li5"><strong>Fotos y publicaciones de la Comunidad:</strong> hasta que borres tu cuenta o las retiremos por incumplir las normas.</li>
+                    <li data-i18n-html="pd.priv.s9.li6"><strong>Reportes y sanciones:</strong> el tiempo necesario para proteger a la comunidad y evitar que se repitan los abusos.</li>
+                    <li data-i18n-html="pd.priv.s9.li7"><strong>Registros de compras:</strong> el tiempo que exijan las leyes fiscales y contables.</li>
+                    <li data-i18n-html="pd.priv.s9.li8"><strong>Registros técnicos de nuestros servidores:</strong> durante un tiempo limitado, para seguridad y diagnóstico.</li>
+                </ul>
+
+                <h3 data-i18n="pd.priv.s10.h">10. Seguridad</h3>
+                <p data-i18n="pd.priv.s10.p1">Protegemos tus datos con conexiones cifradas, servidores protegidos y acceso restringido, y comprobamos tu identidad con el servidor de cuentas en cada sesión. Ningún sistema es 100 % seguro: si ocurre un incidente que afecte a tus datos, te avisaremos cuando la ley lo exija.</p>
+
+                <h3 data-i18n="pd.priv.s11.h">11. Tus derechos</h3>
+                <p data-i18n="pd.priv.s11.p1">Según el lugar donde vivas, puedes tener derecho a saber qué datos tenemos sobre ti y recibir una copia, a corregirlos, a pedir que los borremos, a oponerte a ciertos usos o limitarlos, a recibirlos en un formato portable, a retirar tu consentimiento en cualquier momento y a presentar una queja ante la autoridad de protección de datos de tu país.</p>
+                <p data-i18n-html="pd.priv.s11.p2">Algunas cosas puedes hacerlas tú mismo en el Juego: cambiar tu nombre y tu perfil, silenciar o bloquear jugadores y cambiar tus preferencias de publicidad. Para todo lo demás, escríbenos a <a href="mailto:titinagamessoporte@gmail.com">titinagamessoporte@gmail.com</a> indicando el nombre de tu personaje. Para comprobar que la cuenta es tuya te pediremos una prueba sencilla dentro del Juego, y te responderemos en un plazo máximo de 30 días (o el que fije la ley de tu lugar de residencia).</p>
+
+                <h3 data-i18n="pd.priv.s12.h">12. Derechos en estados de EE. UU.</h3>
+                <p data-i18n-html="pd.priv.s12.p1">Si vives en California u otro estado de EE. UU. con ley de privacidad (como Colorado, Connecticut, Virginia, Utah o Texas), tienes derecho a saber qué datos recogemos, a corregirlos y borrarlos, y a <strong>excluirte de la «venta» o del «compartir» de datos para publicidad personalizada</strong>. No vendemos datos a cambio de dinero, pero cuando aceptas anuncios personalizados nuestros socios publicitarios reciben identificadores y datos de uso, y algunas de estas leyes lo consideran «compartir». Puedes excluirte rechazando la publicidad personalizada en los ajustes de privacidad del Juego, eliminando el ID de publicidad de tu dispositivo o escribiéndonos. No te trataremos de forma distinta por ejercer estos derechos.</p>
+                <p data-i18n="pd.priv.s12.p2">En los últimos 12 meses hemos recogido estas categorías: identificadores (de cuenta, de dispositivo y de publicidad, y la dirección IP), información comercial (compras), actividad en el Juego, ubicación aproximada, información de audio (transmitida en tiempo real, no grabada) y el contenido que publicas. Las recogemos de ti, de tu dispositivo y de nuestros proveedores, para los fines descritos en esta política. No usamos datos sensibles para deducir características sobre ti.</p>
+
+                <h3 data-i18n="pd.priv.s13.h">13. Menores de edad</h3>
+                <p data-i18n-html="pd.priv.s13.p1">PartyDroid no está dirigido a menores de 13 años y no permitimos que se registren. Si tienes menos edad de la que fija tu país para consentir el uso de tus datos (hasta 16 años en algunos países de la Unión Europea), necesitas el permiso de tu padre, madre o tutor. Si sabemos que una cuenta pertenece a un menor de 13 años, la eliminaremos. Si eres padre, madre o tutor y crees que tu hijo nos ha dado datos, escríbenos a <a href="mailto:titinagamessoporte@gmail.com">titinagamessoporte@gmail.com</a>.</p>
+
+                <h3 data-i18n="pd.priv.s14.h">14. Eliminar tu cuenta</h3>
+                <p data-i18n-html="pd.priv.s14.p1">Puedes pedir que borremos tu cuenta y tus datos en cualquier momento. Te explicamos cómo en <a href="eliminar-cuenta.html">Eliminar tu cuenta de PartyDroid</a>.</p>
+
+                <h3 data-i18n="pd.priv.s15.h">15. Cambios en esta política</h3>
+                <p data-i18n="pd.priv.s15.p1">Si cambiamos esta política de forma importante, actualizaremos la fecha de arriba y te pediremos aceptarla de nuevo dentro del Juego.</p>
+
+                <h3 data-i18n="pd.priv.s16.h">16. Contacto</h3>
+                <p data-i18n-html="pd.priv.s16.p1">Titina LLC (Titina Games) · 30 N Gould St, Sheridan, WY 82801, Estados Unidos · <a href="mailto:titinagamessoporte@gmail.com">titinagamessoporte@gmail.com</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="../index.html#inicio" data-i18n="nav.home">Inicio</a>
+                <a href="privacidad.html" data-i18n="pd.foot.privacy">Privacidad de PartyDroid</a>
+                <a href="terminos.html" data-i18n="pd.foot.terms">Términos de PartyDroid</a>
+                <a href="eliminar-cuenta.html" data-i18n="pd.foot.delete">Eliminar cuenta</a>
+            </div>
+            <p data-i18n="footer.rights">&copy; 2026 Titina Games. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../i18n.js?v=2.0"></script>
+    <script src="legal-partydroid.js?v=1"></script>
+    <script src="../script.js?v=2.0"></script>
+</body>
+</html>
